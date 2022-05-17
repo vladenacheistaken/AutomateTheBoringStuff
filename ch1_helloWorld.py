@@ -78,6 +78,4 @@ str()
 
 it causes an error because it concatenates two different data types
 
-Correct: 'I have eaten ' + str(99) + ' burritos.'
-
-"""
+Correct: 'I have eaten ' + str(99) + ' burritos.'"""
