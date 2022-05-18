@@ -1,4 +1,4 @@
-"""Example text from the chapter that I will use to write a script without the author's solution:
+"""Example output from the chapter that I will use to write a script without the author's solution:
 
 I am thinking of a number between 1 and 20.
 Take a guess.
