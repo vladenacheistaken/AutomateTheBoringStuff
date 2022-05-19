@@ -17,23 +17,32 @@ You win!
 Enter your move: (r)ock (p)aper (s)cissors or (q)uit
 q"""
 
-import random
-import time
+import random, time
 
-noWins = 0  # initialize win, loss, tie counters
-noLoss = 0
-noTies = 0
+winCount = 0  # initialize win, loss, tie counters
+lossCount = 0
+tieCount = 0
 
 print("ROCK, PAPER, SCISSORS")
-print(str(noWins) + ", " + str(noLoss) + ", " + str(noTies))
+print(str(winCount) + " Wins, " + str(lossCount) + " Losses, " + str(tieCount) + " Ties")
 
 print("Enter your move: (r)ock (p)aper (s)cissors or (q)uit")
 playerChoice = input()
 
-while playerChoice != "q":
-    while playerChoice.lower() != "r" or playerChoice.lower() != "p" or playerChoice.lower() != "s":
-        print("Enter your move: (r)ock (p)aper (s)cissors or (q)uit")
+choiceDictionary = {"r": "ROCK",
+                    "p": "PAPER",
+                    "s": "SCISSORS",
+                    "q": "QUIT"}  # dictionary of choices used in input validation & picking the computer move
 
-    computerChoice = random.randint(1, 3)
+while playerChoice not in choiceDictionary:
+    print("Please enter (r)ock (p)aper (s)cissors or (q)uit")
+    playerChoice = input()
 
-    if playerChoice == "r" and computerChoice == 1:
+    while playerChoice.lower() != choiceDictionary[3]:  # while user does not type "q"
+        computerChoiceIndex = random.randint(0, 2)
+        computerChoice = choiceList[computerChoiceIndex]
+
+        if playerChoice == computerChoice:
+
+            print("It is a tie!")
+
